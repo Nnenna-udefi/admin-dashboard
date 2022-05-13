@@ -1,0 +1,15 @@
+.badge{
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+.main{
+    margin-left: 300px;
+    background-color: rgb(216, 212, 207);
+    padding: 1rem;
+}
+.badge-section{
+    display: flex;
+}

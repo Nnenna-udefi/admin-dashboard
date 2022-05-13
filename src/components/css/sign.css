@@ -1,0 +1,60 @@
+.form{
+    margin: 2rem 4rem;
+    background-color: rgb(168, 156, 156);
+    border-radius: 10px;
+    padding: 2rem;
+    /* display: flex;
+    justify-content: center;
+    align-content: center; */
+}
+h1{
+    text-align: center;
+    color: #fff;
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:focus{
+    border: 3px solid #555;
+}
+.sign-button{
+    background-color: rgb(92, 92, 209);
+    padding: .7rem 2rem;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    border-radius: 5px;
+    font-weight: 1.2rem;
+}
+.para{
+    display: flex;
+    justify-content: space-between;
+
+}
+.signin-button{
+    background-color: #fff;
+    border: none;
+    padding: .7rem 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+    color:rgb(92, 92, 209);
+    width: 100%;
+    
+}
+.link{
+    text-decoration: none;
+    color:rgb(92, 92, 209);
+    text-align: center;
+    
+}
+
+    
