@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Navbar from './Navbar'
 import { FaUsers } from "react-icons/fa";
-import { Chart } from 'react-charts'
+// import { Chart } from 'react-charts'
 import '../css/home.css'
 
 const home = () => {
@@ -15,8 +15,8 @@ const home = () => {
         <FaUsers /><p>Adrielle John</p>
         </div>
       
-        <button><Link to='./signIn'>Sign In</Link></button>
-        <button><Link to='./signUp'>Sign Up</Link> </button>
+        <button className='link-btn'><Link to='./signIn' className='links'>Sign In</Link></button>
+        <button className='link-btn'><Link to='./signUp'className='links'>Sign Up</Link> </button>
 
         <div className='badge-section'>
 
