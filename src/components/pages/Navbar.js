@@ -1,31 +1,32 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import '../css/navbar.css'
-import { FaHome, FaUsers, FaShoppingCart, FaSignOutAlt } from "react-icons/fa";
+// import {Link} from 'react-router-dom'
+import { HashLink as Link} from 'react-router-hash-link'
+// import { BrowserRouter } from 'react-router-dom';
+import '../../css/navbar.css'
+
 
 const Navbar = () => {
   return (
-    <div className='sidebar'>
-      <header>HAULK</header>
+    
+    <div className='navbar'>
+      <h2>HAULK</h2>
         
         <ul className='Nav-list'>
+            
             <li className='nav-link'>
-            <Link to='./home' className='links'><FaHome className='fa'/>Home</Link>
+            <Link to='#about' smooth className='about-link'>About Us</Link>
             </li>
-            <li className='nav-link'>
-            <Link to='./signIn' className='links'><FaUsers className='fa'/>Clients</Link>
-            </li>
-            <li className='nav-link'>
-            <Link to='./signIn' className='links'><FaUsers className='fa'/>User</Link>
-            </li>
-            <li className='nav-link'>
-            <Link to='./signIn' className='links'><FaShoppingCart className='fa'/>Products</Link>
-            </li>
-            <li className='nav-links'>
-              <Link to='./signIn' className='links'><FaSignOutAlt className='fa'/>LogOut</Link>
-            </li>
+            
         </ul>
+
+        <div>
+
+        <button className='signin-btn'><Link to='./signIn' className='links'>Sign In</Link></button>
+        <button className='signup-btn'><Link to='./signUp'className='links'>Sign Up</Link> </button>
         </div>
+        </div>
+
+       
   )
 }
 
