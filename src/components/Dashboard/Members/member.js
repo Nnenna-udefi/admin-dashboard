@@ -23,7 +23,7 @@ const Member = () => {
     <div className='main'>
         <Dashboard />
 
-        <h2>Team Memebers</h2>
+        <h2>Team Members</h2>
    
         <table>
           <thead>

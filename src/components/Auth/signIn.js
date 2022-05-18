@@ -47,9 +47,11 @@ const SignIn = () => {
   
     
   return (
-    <div className='form'>
-      <h1>Welcome to the admin  portal</h1>
-        <h1 className='sign-title'>Sign In</h1>
+    <div>
+      <h1 className='sign-title'>Welcome to the admin  portal</h1>
+        <h1 className='sign-title'>Log In</h1>
+
+        <div className='form-center'>
         <form className='form' onSubmit={submitHandler} >
             <input type='email' placeholder ='Email Address' name='email' onChange={handleChange}/>
             <br />
@@ -60,8 +62,9 @@ const SignIn = () => {
               <p>Remember Me</p>
               
             </div>
-            <button className='sign-button'>Sign In</button>
+            <button className='sign-button'>Log In</button>
         </form>
+        </div>
     </div>
   )
 }

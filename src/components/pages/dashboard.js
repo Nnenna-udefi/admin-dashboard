@@ -5,6 +5,8 @@ import { FaHome, FaUsers, FaSignOutAlt,FaShoppingCart } from "react-icons/fa";
 
 const dashboard = () => {
 
+  
+
   let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
   return (
     <div className='sidebar'>
@@ -13,7 +15,7 @@ const dashboard = () => {
       
       <ul className='dash-list'>
           <li className='dash-link'>
-          <Link to='/' className='links'><FaHome className='fa'/>Home</Link>
+          <Link to='/home' className='links'><FaHome className='fa'/>Home</Link>
           </li>
           <li className='dash-link'>
           <Link to='/members' className='links'><FaUsers className='fa'/>Members</Link>

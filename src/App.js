@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import Home from './components/pages/home';
 import SignIn from './components/Auth/signIn'
 import SignUp from './components/Auth/signUp';
@@ -10,17 +10,24 @@ import Dashboard from './components/pages/dashboard';
 import Members from './components/Dashboard/Members/member';
 import Clients from './components/Dashboard/Clients/client';
 
+
+
+
+
+
 function App() {
   return (
     <div>
       <BrowserRouter>
       <Routes>
+      <Route path="/" element={<SignIn />}/>
+     <Route path ='/dashboard' element={<Dashboard /> }/> 
+      <Route path="*" element={<Navigate to ="/" />} />
+        <Route path = '/home' element={<Home />}/>
         
-        <Route path = '/' element={<Home />}/>
-        <Route path="/signIn" element={<SignIn />}/>
         <Route path="/signUp" element={<SignUp />}/>
         <Route path ='/Navbar' element={<Navbar />} />
-        <Route path ='/dashboard' element={<Dashboard />} />
+        
         {/* <Route path ='/about' element={<About />} /> */}
         <Route path ='/product' element={<Product />} />
         <Route path = '/clients' element ={<Clients />} />

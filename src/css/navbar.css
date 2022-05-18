@@ -71,12 +71,17 @@ Link{
 .sidebar h3{
     padding: 1rem;
 }
-table, td, th, tr{
-    border: 1px solid rgb(78, 74, 74);
+th, td{
+    border: 1px solid #ddd;
+    padding: 1rem;
 }
 
 table{
     width: 100%;
+    margin: 2rem 1rem;
+}
+th{
+    background-color: #04AA6D;
 }
 .about-link{
     color: #fff;

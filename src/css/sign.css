@@ -1,21 +1,25 @@
 .form{
     margin: 2rem 4rem;
     background-color: rgb(168, 156, 156);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 2rem;
-    /* display: flex;
-    justify-content: center;
-    align-content: center; */
-}
-h1{
     text-align: center;
-    color: #fff;
+    
+}
+.form-center{
+    display: flex;
+    justify-content: center;
+    /* width: 400px; */
+    margin: 0, auto;
+}
+.sign-title{
+    text-align: center;
+    margin: 2rem;
 }
 input{
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: flex;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -36,7 +40,7 @@ input:focus{
 }
 .para{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around
 
 }
 .signin-button{
