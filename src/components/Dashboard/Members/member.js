@@ -27,6 +27,7 @@ const Member = () => {
    
         <table>
           <thead>
+            
               <tr>
                   <th>FIRST NAME</th>
                   <th>LAST NAME</th>

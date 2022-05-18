@@ -5,7 +5,7 @@ import { FaUsers } from "react-icons/fa";
 import '../../css/home.css'
 import About from '../pages/about'
 import Dashboard from '../pages/dashboard'
-import Linechart  from '../../components/linechart';
+// import Line  from '../../components/linechart';
 
 
 
@@ -17,15 +17,13 @@ const home = () => {
 
       <Dashboard />
 
-      
-      
      <div className='main'>
      <Navbar />
    
       <div className='home'>
         <div className='top-header'>
         <input type="text" placeholder='Welcome, Adrielle' name="name" />
-        <FaUsers /><p>Adrielle John</p>
+        <p>Adrielle John</p>
         </div>
 
         <div className='badge-section'>
@@ -42,7 +40,14 @@ const home = () => {
             <p>15</p>
           </div>
 
+          <div className='badge'>
+            <FaUsers />
+            <p>No of Team Members</p>
+            <p>15</p>
+          </div>
+
         </div>
+
 
 
 
@@ -50,7 +55,7 @@ const home = () => {
         
     </div>
     <div className='chart'>
-     <Linechart />
+    {/* <Line /> */}
    </div>
 
 

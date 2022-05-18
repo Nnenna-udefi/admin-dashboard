@@ -11,7 +11,7 @@ const dashboard = () => {
   return (
     <div className='sidebar'>
       <h2 className='header'>HAULK</h2>
-      <h3>Welcome, {userDetails.name}</h3>
+      <h3>Welcome back</h3>
       
       <ul className='dash-list'>
           <li className='dash-link'>

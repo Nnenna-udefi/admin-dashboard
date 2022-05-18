@@ -21,6 +21,15 @@ background-size: cover;
     padding: 4rem;
     width: 100%;
 }
+.about-para{
+   background-color: rgb(216, 212, 207); 
+   margin-left: 250px;
+   padding: 2rem;
+   margin-bottom: 2rem;
+}
+#about{
+    text-align: center;
+}
 .badge-section{
     display: flex;
 }
