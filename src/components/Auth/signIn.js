@@ -12,7 +12,6 @@ const SignIn = () => {
         password: ""
     });
   
-    const [name, setName] = useState("Prudence")
   
     useEffect(()=>{
         if (
@@ -48,7 +47,7 @@ const SignIn = () => {
     
   return (
     <div>
-      <h1 className='sign-title'>Welcome to the admin  portal</h1>
+      <h1 className='sign-title'>Welcome to the Admin Portal</h1>
         <h1 className='sign-title'>Log In</h1>
 
         <div className='form-center'>

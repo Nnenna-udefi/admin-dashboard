@@ -7,7 +7,7 @@ const dashboard = () => {
 
   
 
-  let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
+  // let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
   return (
     <div className='sidebar'>
       <h2 className='header'>HAULK</h2>
