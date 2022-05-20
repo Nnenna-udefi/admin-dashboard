@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import Home from './components/pages/home';
 import SignIn from './components/Auth/signIn';
 import Navbar from './components/pages/Navbar';
-import Product from './components/pages/product';
+import Product from './components/Dashboard/Products/product';
 import Dashboard from './components/pages/dashboard';
 import Members from './components/Dashboard/Members/member';
 import Clients from './components/Dashboard/Clients/client';
