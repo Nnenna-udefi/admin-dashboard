@@ -4,8 +4,8 @@ import Navbar from './Navbar'
 import { FaUsers } from "react-icons/fa";
 import '../../css/home.css'
 import About from '../pages/about'
-import Dashboard from '../pages/dashboard';
-// import Chart from '../Linechart'
+// import Dashboard from '../pages/dashboard';
+// import Linechart from '../Linechart';
 // import Chart from 'charts.js/auto';
 
 
@@ -32,16 +32,13 @@ const home = () => {
   
     <div>
 
-      <Dashboard />
+      {/* <Dashboard /> */}
 
      <div className='main'>
      <Navbar />
    
       <div className='home'>
-        <div className='top-header'>
-        <input type="text" placeholder='Welcome, Adrielle' name="name" className='home-input' />
-        <p>Adrielle John</p>
-        </div>
+      
 
         <div className='badge-section'>
 
@@ -68,9 +65,7 @@ const home = () => {
 
         <div className='chart'>
           <h1>Hello Chart</h1>
-          {/* <Chart /> */}
-
-         
+          {/* <Linechart />    */}
    </div>
 
       </div>

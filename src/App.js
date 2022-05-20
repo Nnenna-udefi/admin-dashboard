@@ -18,16 +18,19 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SignIn />}/>
+        </Routes>
+      <Dashboard />
+      
       <Routes>
-      <Route path="/" element={<SignIn />}/>
-      <Route element ={<Protectedroute />}>
-          <Route path ='/dash' element={<Dashboard /> }/> 
-          <Route path = '/dashboard' element={<Home />}/>
+        <Route element ={<Protectedroute />}>
+          <Route path = '/dashboard' element={<Home />} />
+        </Route>
           <Route path ='/Navbar' element={<Navbar />} />
           <Route path ='/product' element={<Product />} />
           <Route path = '/clients' element ={<Clients />} />
           <Route path = '/members' element ={<Members />} />
-      </Route>
         </Routes>
         </BrowserRouter>
       

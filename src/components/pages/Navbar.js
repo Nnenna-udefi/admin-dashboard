@@ -1,11 +1,13 @@
 import React from 'react'
 import { HashLink as Link} from 'react-router-hash-link'
+import { FaBell } from 'react-icons/fa'
 import '../../css/navbar.css'
+import '../../css/home.css'
 
 
 const Navbar = () => {
   return (
-    
+    <div>
     <div className='navbar'>
       <h2>HAULK</h2>
         
@@ -17,7 +19,13 @@ const Navbar = () => {
             
         </ul>
 
-        
+        </div>
+
+        <div className='top-header'>
+        <input type="text" placeholder='Welcome, Adrielle' name="name" className='home-input' />
+        <FaBell  className="bell"/>
+        <p>Adrielle John</p>
+        </div>
         </div>
 
        

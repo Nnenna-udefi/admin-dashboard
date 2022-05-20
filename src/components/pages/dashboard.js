@@ -27,7 +27,7 @@ const dashboard = () => {
           <Link to='/product' className='links'><FaShoppingCart className='fa'/>Products</Link>
           </li>
           <li className='dash-links'>
-            <Link to='/signIn' className='links'><FaSignOutAlt className='fa'/>LogOut</Link>
+            <Link to='/' className='links'><FaSignOutAlt className='fa'/>LogOut</Link>
           </li>
       </ul>
 

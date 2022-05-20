@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
-import Dashboard from '../../pages/dashboard';
+// import Dashboard from '../../pages/dashboard';
+import Navbar from '../../pages/Navbar';
 
 const Product = () => {
     const [products, setProducts] = useState([])
@@ -18,9 +19,10 @@ const Product = () => {
 console.log(products)
 
   return (
-
+<div>
+{/* <Dashboard /> */}
     < div className='main'>
-    <Dashboard />
+   <Navbar />
 
     <h1 className='product-title'>Our Products</h1>
 
@@ -97,7 +99,7 @@ console.log(products)
       </div>
     </div>
 
-
+    </div>
    </div>
   )
 }

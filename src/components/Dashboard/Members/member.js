@@ -1,6 +1,7 @@
 import React from 'react'
-import Dashboard from '../../pages/dashboard'
+// import Dashboard from '../../pages/dashboard'
 import {useState, useEffect} from 'react'
+import Navbar from '../../pages/Navbar'
 
 const Member = () => {
 
@@ -20,8 +21,10 @@ const Member = () => {
   
   
   return (
+    <div>
+      {/* <Dashboard /> */}
     <div className='main'>
-        <Dashboard />
+     <Navbar />   
 
         <h2>Team Members</h2>
    
@@ -118,6 +121,7 @@ const Member = () => {
             
           </tbody>
        </table>
+    </div>
     </div>
   )
 }

@@ -1,7 +1,8 @@
 import React from 'react'
-import Dashboard from '../../pages/dashboard'
+// import Dashboard from '../../pages/dashboard'
 // import Axios from 'axios'
 import { useState, useEffect } from 'react'
+import Navbar from '../../pages/Navbar'
 // import { useParams } from 'react-router-dom'
 
 const Client = () => {
@@ -34,8 +35,10 @@ const Client = () => {
 
   
   return (
-    <div className='main'>
-      <Dashboard />
+    <div>
+{/* <Dashboard /> */}
+    < div className='main'>
+   <Navbar />
       <div>
 
         <h2>Our Clients</h2>
@@ -141,7 +144,7 @@ const Client = () => {
           </tbody>
        </table>
     </div>
-
+</div>
 
     </div>
   )
