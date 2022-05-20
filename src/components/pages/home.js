@@ -39,7 +39,7 @@ const home = () => {
    
       <div className='home'>
         <div className='top-header'>
-        <input type="text" placeholder='Welcome, Adrielle' name="name" />
+        <input type="text" placeholder='Welcome, Adrielle' name="name" className='home-input' />
         <p>Adrielle John</p>
         </div>
 
@@ -54,13 +54,13 @@ const home = () => {
           <div className='badge'>
             <FaUsers />
             <p>Total Products</p>
-            <p>15</p>
+            <p>50</p>
           </div>
 
           <div className='badge'>
             <FaUsers />
             <p>No of Team Members</p>
-            <p>15</p>
+            <p>5</p>
           </div>
 
         </div>

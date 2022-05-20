@@ -46,7 +46,7 @@ const SignIn = () => {
   
     
   return (
-    <div>
+    <div className='form-body'>
       <h1 className='sign-title'>Welcome to the Admin Portal</h1>
         <h1 className='sign-title'>Log In</h1>
 
