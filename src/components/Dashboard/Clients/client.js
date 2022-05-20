@@ -20,7 +20,7 @@ const Client = () => {
   
  
   const [clients, setClients] = useState([])
-const [error, setError] = use state([])
+const [error, setError] = use state(null)
 
 
 const fetchData = async ()=> {
