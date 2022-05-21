@@ -21,15 +21,26 @@ const Client = () => {
  
   const [clients, setClients] = useState([])
 
+  const [error, setError] = useState(null)
+
   useEffect(() => {
-    fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
-  .then(res => res.json())
-  .then(data => setClients(data.data))
 
-
-  
+const fetchData = async ()=> {
+  try {
+    const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
+  const response = await response.json(data)
+   setClients(response)
     
-  }, [])
+  } catch (error) {
+    setError(error.message)
+  }
+
+}
+fetchData()
+
+    
+  }, [clients])
+
 
   console.log(clients)
 

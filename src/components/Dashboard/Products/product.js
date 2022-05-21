@@ -6,15 +6,26 @@ import Navbar from '../../pages/Navbar';
 const Product = () => {
     const [products, setProducts] = useState([])
 
-    useEffect(() => {
-      fetch('https://fakerapi.it/api/v1/products?_quantity=1')
-    
-      .then(res =>res.json())
-      .then(data => setProducts(data.data))
+    const [error, setError] = useState(null)
 
+    useEffect(() => {
+  
+  const fetchData = async ()=> {
+    try {
+      const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
+    const response = await response.json(data)
+     setProducts(response)
       
+    } catch (error) {
+      setError(error.message)
+    }
+  
+  }
+  fetchData()
+  
       
-    }, [])
+    }, [products])
+  
     
 console.log(products)
 
