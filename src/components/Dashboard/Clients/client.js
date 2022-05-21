@@ -8,38 +8,40 @@ import Navbar from '../../pages/Navbar'
 const Client = () => {
   // const url = 'https://fakerapi.it/api/v1/companies?_quantity=1'
   // const [clients, setClients] = useState(null)
-  
   // useEffect (() =>{
   //   Axios.get(url)
   //   .then((response)=>{
   //     setClients(response.data)
-  
   //   });
-
   // }, [url])
-  
- 
+//   const [clients, setClients] = useState([])
+// const [error, setError] = use state(null)
+// const fetchData = async ()=> {
+//   try {
+//     const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
+//   const response = await response.json(data)
+//    setClients(response)
+//   } catch (error) {
+//     setError(error.message)
+//   }
+//   }, [clients])
+//   console.log(clients)
+
+
+// Lawson Godgive own starts here
+
+// i dont know how to use the erro method for Network Information, so i used the plain method
+
   const [clients, setClients] = useState([])
-const [error, setError] = use state(null)
 
+    useEffect(() => {
+      fetch('https://fakerapi.it/api/v1/companies?_quantity=5')
+      .then(response => response.json())
+      .then(data => setClients(data.data))
+    },[])
 
-const fetchData = async ()=> {
-  try {
-    const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
-  const response = await response.json(data)
-   setClients(response)
-    
-  } catch (error) {
-    setError(error.message)
-  }
+    console.log(clients)
 
-  
-    
-  }, [clients])
-
-  console.log(clients)
-
-  
   return (
     <div>
 {/* <Dashboard /> */}
@@ -64,10 +66,23 @@ const fetchData = async ()=> {
           <tbody>
             
           
-              {
+              {/* {
 clients ? clients?.map((clients, idx) => (
             <tr key={idx}>
                 <td>{clients[0].id}</td>
+                <td>{clients[0].contact.firstname}</td>
+                <td>{clients[0].contact.lastname}</td>
+              <td>{clients[0].email}</td>
+              <td>{clients[0].phone}</td>
+               </tr>
+         ) ) : null
+        }
+
+            
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
+            <td>{clients[0].id}</td>
                 <td>{clients[0].firstname}</td>
                 <td>{clients[0].lastname}</td>
               <td>{clients[0].email}</td>
@@ -89,7 +104,6 @@ clients ? clients?.map((clients, idx) => (
          ) ) : null
         }
 
-            
             {
 clients ? clients?.map((clients, idx) => (
             <tr key={idx}>
@@ -160,28 +174,24 @@ clients ? clients?.map((clients, idx) => (
               <td>{clients[7].phone}</td>
                </tr>
          ) ) : null
-        }
+        } */}
+
+
+
+        {/* I commented out the above tables and datas, you just need 1 then if you want 
+        to multiple the clients you have to increase the number at the end of your API link.
+
+        Also you tried getting the API information in a wrong format
+        check below and compare with your own above. i removed the indexing numbers you attached to it*/}
 
             {
 clients ? clients?.map((clients, idx) => (
             <tr key={idx}>
-            <td>{clients[8].id}</td>
-                <td>{clients[8].firstname}</td>
-                <td>{clients[8].lastname}</td>
-              <td>{clients[8].email}</td>
-              <td>{clients[8].phone}</td>
-               </tr>
-         ) ) : null
-        }
-
-            {
-clients ? clients?.map((clients, idx) => (
-            <tr key={idx}>
-            <td>{clients[9].id}</td>
-                <td>{clients[9].firstname}</td>
-                <td>{clients[9].lastname}</td>
-              <td>{clients[9].email}</td>
-              <td>{clients[9].phone}</td>
+            <td>{clients.id}</td>
+                <td>{clients.contact.firstname}</td>
+                <td>{clients.contact.lastname}</td>
+              <td>{clients.email}</td>
+              <td>{clients.phone}</td>
                </tr>
          ) ) : null
         }
@@ -196,4 +206,4 @@ clients ? clients?.map((clients, idx) => (
   )
 }
 
-export default Client
+export default Client;

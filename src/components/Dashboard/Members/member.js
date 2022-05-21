@@ -5,32 +5,35 @@ import Navbar from '../../pages/Navbar'
 
 const Member = () => {
 
-  const [member, setMember] = useState([])
-
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-
-const fetchData = async ()=> {
-  try {
-    const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
-  const response = await response.json(data)
-   setMember(response)
-    
-  } catch (error) {
-    setError(error.message)
-  }
-
-}
-fetchData()
-
-    
-  }, [member])
+//   const [member, setMember] = useState([])
+//   const [error, setError] = useState(null)
+//   useEffect(() => {
+// const fetchData = async ()=> {
+//   try {
+//     const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
+//   const response = await response.json(data)
+//    setMember(response) 
+//   } catch (error) {
+//     setError(error.message)
+//   }
+// }
+// fetchData()
+//   }, [member])
 
 
 
-  console.log(member)
-  
+// Lawson Godgive own starts here
+// i dont know how to use the erro method for Network Information, so i used the plain method
+
+const [member, setMember] = useState([])
+
+useEffect(() => {
+  fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
+  .then(response => response.json())
+  .then(data => setMember(data.data))
+},[])
+
+console.log(member)  
   
   return (
     <div>
@@ -55,7 +58,7 @@ fetchData()
 
           <tbody>
             
-            {
+            {/* {
                member ? member?.map((member, idx) => (
             <tr key={idx}>
                 <td>{member[0].firstname}</td>
@@ -152,15 +155,23 @@ member ? member?.map((member, idx) => (
               <td>{member[8].phone}</td>
                 </tr>
          ) ) : null
-        }
+        } */}
+
+
+
+        {/* I commented out the above tables and datas, you just need 1 then if you want 
+        to multiple the clients you have to increase the number at the end of your API link.
+
+        Also you tried getting the API information in a wrong format
+        check below and compare with your own above. i removed the indexing numbers you attached to it*/}
 
            {
 member ? member?.map((member, idx) => (
             <tr key={idx}>
-                <td>{member[9].firstname}</td>
-                <td>{member[9].lastname}</td>
-              <td>{member[9].email}</td>
-              <td>{member[9].phone}</td>
+                <td>{member.firstname}</td>
+                <td>{member.lastname}</td>
+              <td>{member.email}</td>
+              <td>{member.phone}</td>
                 </tr>
          ) ) : null
         }
@@ -175,4 +186,4 @@ member ? member?.map((member, idx) => (
   )
 }
 
-export default Member
+export default Member;
