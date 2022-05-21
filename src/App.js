@@ -27,10 +27,10 @@ function App() {
         <Route element ={<Protectedroute />}>
           <Route path = '/dashboard' element={<Home />} />
         </Route>
-          <Route path ='/Navbar' element={<Navbar />} />
-          <Route path ='/product' element={<Product />} />
-          <Route path = '/clients' element ={<Clients />} />
-          <Route path = '/members' element ={<Members />} />
+          <Route path ='Navbar' element={<Navbar />} />
+          <Route path ='/dashboard/product' element={<Product />} />
+          <Route path = '/dashboard/clients' element ={<Clients />} />
+          <Route path = '/dashboard/members' element ={<Members />} />
         </Routes>
         </BrowserRouter>
       

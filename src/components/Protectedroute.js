@@ -6,7 +6,7 @@ const userAuth = () =>{
   // const user = { loggedin: false };
   // return user && user.loggedin;
 
-  let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
+  let userDetails = JSON.parse(localStorage.getItem("userDetails"))
   return userDetails
 };
 

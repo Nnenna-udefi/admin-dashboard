@@ -8,8 +8,8 @@ const SignIn = () => {
     const [formValid, setFormValid] = useState(false)
     const [form, setForm] = useState({
        
-        email: "",
-        password: ""
+        email: "miriamudefi@gmail.com",
+        password: "12345"
     });
   
   
@@ -39,7 +39,7 @@ const SignIn = () => {
   
     const submitHandler = (e) => {
         e.preventDefault()
-        sessionStorage.setItem('userDetails', JSON.stringify({...form}))
+        localStorage.setItem('userDetails', JSON.stringify({...form}))
         
         window.location="/dashboard"
     }

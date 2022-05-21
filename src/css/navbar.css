@@ -44,6 +44,12 @@ Link{
     border-radius: 10px;
     padding: .5rem;
 }
+.dash-link :hover{
+    background-color: #fff;
+    color:#000;
+    border-radius: 10px;
+    padding: .5rem;
+}
 .fa{
     margin-right: 1rem;
 }

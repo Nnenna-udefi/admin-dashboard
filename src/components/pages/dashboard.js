@@ -18,13 +18,13 @@ const dashboard = () => {
           <Link to='/home' className='links'><FaHome className='fa'/>Home</Link>
           </li>
           <li className='dash-link'>
-          <Link to='/members' className='links'><FaUsers className='fa'/>Members</Link>
+          <Link to='/dashboard/members' className='links'><FaUsers className='fa'/>Members</Link>
           </li>
           <li className='dash-link'>
-          <Link to='/clients' className='links'><FaUsers className='fa' />Clients</Link>
+          <Link to='/dashboard/clients' className='links'><FaUsers className='fa' />Clients</Link>
           </li>
           <li className='dash-link'>
-          <Link to='/product' className='links'><FaShoppingCart className='fa'/>Products</Link>
+          <Link to='/dashboard/product' className='links'><FaShoppingCart className='fa'/>Products</Link>
           </li>
           <li className='dash-links'>
             <Link to='/' className='links'><FaSignOutAlt className='fa'/>LogOut</Link>

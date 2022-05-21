@@ -58,87 +58,127 @@ const Client = () => {
           <tbody>
             
           
-              <tr>
+              {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
                 <td>{clients[0].id}</td>
                 <td>{clients[0].firstname}</td>
                 <td>{clients[0].lastname}</td>
               <td>{clients[0].email}</td>
               <td>{clients[0].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
             
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[1].id}</td>
                 <td>{clients[1].firstname}</td>
                 <td>{clients[1].lastname}</td>
               <td>{clients[1].email}</td>
               <td>{clients[1].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
             
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[2].id}</td>
                 <td>{clients[2].firstname}</td>
                 <td>{clients[2].lastname}</td>
               <td>{clients[2].email}</td>
               <td>{clients[2].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[3].id}</td>
                 <td>{clients[3].firstname}</td>
                 <td>{clients[3].lastname}</td>
               <td>{clients[3].email}</td>
               <td>{clients[3].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[4].id}</td>
                 <td>{clients[4].firstname}</td>
                 <td>{clients[4].lastname}</td>
               <td>{clients[4].email}</td>
               <td>{clients[4].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[5].id}</td>
                 <td>{clients[5].firstname}</td>
                 <td>{clients[5].lastname}</td>
               <td>{clients[5].email}</td>
               <td>{clients[5].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[6].id}</td>
                 <td>{clients[6].firstname}</td>
                 <td>{clients[6].lastname}</td>
               <td>{clients[6].email}</td>
               <td>{clients[6].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[7].id}</td>
                 <td>{clients[7].firstname}</td>
                 <td>{clients[7].lastname}</td>
               <td>{clients[7].email}</td>
               <td>{clients[7].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[8].id}</td>
                 <td>{clients[8].firstname}</td>
                 <td>{clients[8].lastname}</td>
               <td>{clients[8].email}</td>
               <td>{clients[8].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
 
-            <tr >
+            {
+clients ? clients?.map((clients, idx) => (
+            <tr key={idx}>
             <td>{clients[9].id}</td>
                 <td>{clients[9].firstname}</td>
                 <td>{clients[9].lastname}</td>
               <td>{clients[9].email}</td>
               <td>{clients[9].phone}</td>
-            </tr>
+               </tr>
+         ) ) : null
+        }
          
 
           </tbody>

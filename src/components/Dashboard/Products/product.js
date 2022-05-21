@@ -28,8 +28,10 @@ console.log(products)
 
 
     <div className='card-box'>
-
-    <div className='cards'>
+    {
+products ? products?.map((products, idx) => (
+            
+    <div className='cards' key={idx}>
         <img src={products[0]} alt=''/>
         <p>{products[0].name}</p>
         <p>{products[0].description}</p>
@@ -39,8 +41,12 @@ console.log(products)
         <p>{products[0].categories}</p>
         <p>{products[0].tags}</p>
       </div>
-
-      <div className='cards'>
+      ) ) : null
+          }
+{
+products ? products?.map((products, idx) => (
+            
+    <div className='cards' key={idx}>
         <img src={products[1]} alt=''/>
         <p>{products[1].name}</p>
         <p>{products[1].description}</p>
@@ -50,8 +56,13 @@ console.log(products)
         <p>{products[1].categories}</p>
         <p>{products[1].tags}</p>
       </div>
+       ) ) : null
+      }
 
-      <div className='cards'>
+{
+  products ? products?.map((products, idx) => (
+              
+      <div className='cards' key={idx}>
         <img src={products[2]} alt=''/>
         <p>{products[2].name}</p>
         <p>{products[2].description}</p>
@@ -61,11 +72,17 @@ console.log(products)
         <p>{products[2].categories}</p>
         <p>{products[2].tags}</p>
       </div>
+      ) ) : null
+    }
     </div>
+    
 
     <div className='card-box'>
 
-    <div className='cards'>
+    {
+products ? products?.map((products, idx) => (
+            
+    <div className='cards' key={idx}>
         <img src={products[3]} alt=''/>
         <p>{products[3].name}</p>
         <p>{products[3].description}</p>
@@ -75,8 +92,13 @@ console.log(products)
         <p>{products[3].categories}</p>
         <p>{products[3].tags}</p>
       </div>
+       ) ) : null
+      }
 
-      <div className='cards'>
+      {
+products ? products?.map((products, idx) => (
+            
+    <div className='cards' key={idx}>
         <img src={products[4]} alt=''/>
         <p>{products[4].name}</p>
         <p>{products[4].description}</p>
@@ -86,8 +108,13 @@ console.log(products)
         <p>{products[4].categories}</p>
         <p>{products[4].tags}</p>
       </div>
+       ) ) : null
+      }
 
-      <div className='cards'>
+      {
+products ? products?.map((products, idx) => (
+            
+    <div className='cards' key={idx}>
         <img src={products[5]} alt=''/>
         <p>{products[5].name}</p>
         <p>{products[5].description}</p>
@@ -97,6 +124,8 @@ console.log(products)
         <p>{products[5].categories}</p>
         <p>{products[5].tags}</p>
       </div>
+       ) ) : null
+      }
     </div>
 
     </div>
