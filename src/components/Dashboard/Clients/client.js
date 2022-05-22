@@ -6,19 +6,7 @@ import Navbar from '../../pages/Navbar'
 // import { useParams } from 'react-router-dom'
 
 const Client = () => {
-  // const url = 'https://fakerapi.it/api/v1/companies?_quantity=1'
-  // const [clients, setClients] = useState(null)
-  
-  // useEffect (() =>{
-  //   Axios.get(url)
-  //   .then((response)=>{
-  //     setClients(response.data)
-  
-  //   });
 
-  // }, [url])
-  
- 
   const [clients, setClients] = useState([])
 
   const [error, setError] = useState(null)
@@ -42,12 +30,15 @@ fetchData()
   }, [clients])
 
 
-  console.log(clients)
 
+  console.log(clients)
+  
+  
+ 
   
   return (
     <div>
-{/* <Dashboard /> */}
+
     < div className='main'>
    <Navbar />
       <div>

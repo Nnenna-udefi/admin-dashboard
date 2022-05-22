@@ -4,34 +4,38 @@ import {useState, useEffect} from 'react';
 import Navbar from '../../pages/Navbar';
 
 const Product = () => {
-    const [products, setProducts] = useState([])
 
-    const [error, setError] = useState(null)
 
-    useEffect(() => {
-  
-  const fetchData = async ()=> {
-    try {
-      const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
-    const response = await response.json(data)
-     setProducts(response)
-      
-    } catch (error) {
-      setError(error.message)
-    }
-  
-  }
-  fetchData()
-  
-      
-    }, [products])
-  
+  const [products, setProducts] = useState([])
+
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+
+const fetchData = async ()=> {
+  try {
+    const data = await fetch('https://fakerapi.it/api/v1/products?_quantity=1')
+  const response = await response.json(data)
+   setProducts(response)
     
-console.log(products)
+  } catch (error) {
+    setError(error.message)
+  }
+
+}
+fetchData()
+
+    
+  }, [products])
+
+
+
+  console.log(products)
+
 
   return (
 <div>
-{/* <Dashboard /> */}
+
     < div className='main'>
    <Navbar />
 
