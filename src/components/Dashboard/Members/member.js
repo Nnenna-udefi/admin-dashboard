@@ -6,6 +6,7 @@ import Navbar from '../../pages/Navbar'
 const Member = () => {
 
   const [member, setMember] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   const [error, setError] = useState(null)
 
@@ -13,19 +14,23 @@ const Member = () => {
 
 const fetchData = async ()=> {
   try {
-    const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
-  const response = await response.json(data)
-   setMember(response)
-    
-  } catch (error) {
-    setError(error.message)
+    const res = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10');
+  const {data, code} = await res.json();
+  if (code !== 200){
+    throw Error("Something went wrong");
   }
 
+  setIsLoading(false);
+  setMember(data);
 }
-fetchData()
-
+catch(error){
+  setIsLoading(false);
+  setError(error.message);
+}
+};
+fetchData();
+  }, []);
     
-  }, [member])
 
 
 
@@ -54,18 +59,28 @@ fetchData()
           
 
           <tbody>
+
+            {isLoading &&
+            Array.from({length: 10}).map((item, index) =>(
+              <tr key ={index}>
+                <td>Loading...</td>
+                <td>Loading...</td>
+                <td>Loading...</td>
+                <td>Loading...</td>
+              </tr>
+            ))}
             
             {
-               member ? member?.map((member, idx) => (
-            <tr key={idx}>
-                <td>{member[0].firstname}</td>
-                <td>{member[0].lastname}</td>
-              <td>{member[0].email}</td>
-              <td>{member[0].phone}</td>
+               member.map(({firstname, lastname, email, phone, id}) => (
+              <tr key={id}>
+                <td>{firstname}</td>
+                <td>{lastname}</td>
+              <td>{email}</td>
+              <td>{phone}</td>
             </tr>
-    ) ) : null
-  }
-            {
+               ))}
+ 
+            {/* {
                member ? member?.map((member, idx) => (
             <tr key={idx}>
             
@@ -164,7 +179,7 @@ member ? member?.map((member, idx) => (
                 </tr>
          ) ) : null
         }
-         
+          */}
 
             
             
