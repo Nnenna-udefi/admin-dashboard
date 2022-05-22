@@ -8,6 +8,7 @@ import Navbar from '../../pages/Navbar'
 const Client = () => {
 
   const [clients, setClients] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   const [error, setError] = useState(null)
 
@@ -15,26 +16,27 @@ const Client = () => {
 
 const fetchData = async ()=> {
   try {
-    const data = await fetch('https://fakerapi.it/api/v1/persons?_quantity=10')
-  const response = await response.json(data)
-   setClients(response)
-    
-  } catch (error) {
-    setError(error.message)
+    const res = await fetch('https://fakerapi.it/api/v1/companies?_quantity=10');
+  const {data, code} = await res.json();
+  if (code !== 200){
+    throw Error("Something went wrong");
   }
 
+  setIsLoading(false);
+  setClients(data);
 }
-fetchData()
-
-    
-  }, [clients])
-
+catch(error){
+  setIsLoading(false);
+  setError(error.message);
+}
+};
+fetchData();
+  }, []);
 
 
   console.log(clients)
   
   
- 
   
   return (
     <div>
@@ -47,9 +49,9 @@ fetchData()
     <table>
           <thead>
           <tr>
-            <th></th>
-                  <th>FIRST NAME</th>
-                  <th>LAST NAME</th>
+            
+                  <th>NAME</th>
+                  <th>VAT</th>
                   <th>EMAIL</th>
                   <th>PHONE NUMBER</th>
                   
@@ -58,9 +60,31 @@ fetchData()
           
 
           <tbody>
+
+          {isLoading &&
+            Array.from({length: 10}).map((item, index) =>(
+              <tr key ={index}>
+                <td>Loading...</td>
+                <td>Loading...</td>
+                <td>Loading...</td>
+                <td>Loading...</td>
+              </tr>
+            ))}
+            
+            {
+               clients.map(({name, vat, email, phone, id}) => (
+              <tr key={id}>
+                <td>{name}</td>
+                <td>{vat}</td>
+              <td>{email}</td>
+              <td>{phone}</td>
+            </tr>
+               ))}
+            
+            
             
           
-              {
+              {/* {
 clients ? clients?.map((clients, idx) => (
             <tr key={idx}>
                 <td>{clients[0].id}</td>
@@ -180,7 +204,7 @@ clients ? clients?.map((clients, idx) => (
               <td>{clients[9].phone}</td>
                </tr>
          ) ) : null
-        }
+        } */}
          
 
           </tbody>

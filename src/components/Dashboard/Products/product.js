@@ -6,7 +6,9 @@ import Navbar from '../../pages/Navbar';
 const Product = () => {
 
 
+
   const [products, setProducts] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   const [error, setError] = useState(null)
 
@@ -14,24 +16,27 @@ const Product = () => {
 
 const fetchData = async ()=> {
   try {
-    const data = await fetch('https://fakerapi.it/api/v1/products?_quantity=1')
-  const response = await response.json(data)
-   setProducts(response)
-    
-  } catch (error) {
-    setError(error.message)
+    const res = await fetch('https://fakerapi.it/api/v1/products?_quantity=1');
+  const {data, code} = await res.json();
+  if (code !== 200){
+    throw Error("Something went wrong");
   }
 
+  setIsLoading(false);
+  setProducts(data);
 }
-fetchData()
-
-    
-  }, [products])
+catch(error){
+  setIsLoading(false);
+  setError(error.message);
+}
+};
+fetchData();
+  }, []);
 
 
 
   console.log(products)
-
+  
 
   return (
 <div>
@@ -40,6 +45,27 @@ fetchData()
    <Navbar />
 
     <h1 className='product-title'>Our Products</h1>
+
+    {isLoading &&
+            Array.from({length: 10}).map((item, index) =>(
+              <tr key ={index}>
+                <td>Loading...</td>
+                <td>Loading...</td>
+                <td>Loading...</td>
+                <td>Loading...</td>
+              </tr>
+            ))}
+            
+            {
+               products.map(({firstname, lastname, email, phone, id}) => (
+              <tr key={id}>
+                <td>{firstname}</td>
+                <td>{lastname}</td>
+              <td>{email}</td>
+              <td>{phone}</td>
+            </tr>
+               ))}
+            
 
 
     <div className='card-box'>
