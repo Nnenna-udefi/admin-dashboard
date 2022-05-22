@@ -34,7 +34,7 @@ fetchData()
   
   return (
     <div>
-      {/* <Dashboard /> */}
+    
     <div className='main'>
      <Navbar />   
 
