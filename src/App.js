@@ -4,7 +4,7 @@ import Home from './components/pages/home';
 import SignIn from './components/Auth/signIn';
 import Navbar from './components/pages/Navbar';
 import Product from './components/Dashboard/Products/product';
-import Dashboard from './components/pages/dashboard';
+import Sidebar from './components/pages/sidebar';
 import Members from './components/Dashboard/Members/member';
 import Clients from './components/Dashboard/Clients/client';
 import Protectedroute from './components/Protectedroute';
@@ -21,16 +21,18 @@ function App() {
         <Routes>
           <Route path="/" element={<SignIn />}/>
         </Routes>
-      <Dashboard />
+
+      <Sidebar />
       
       <Routes>
         <Route element ={<Protectedroute />}>
           <Route path = '/dashboard' element={<Home />} />
-        </Route>
-          <Route path ='Navbar' element={<Navbar />} />
-          <Route path ='/dashboard/product' element={<Product />} />
-          <Route path = '/dashboard/clients' element ={<Clients />} />
-          <Route path = '/dashboard/members' element ={<Members />} />
+            <Route path ='Navbar' element={<Navbar />} />
+            <Route path ='/dashboard/product' element={<Product />} />
+            <Route path = '/dashboard/clients' element ={<Clients />} />
+            <Route path = '/dashboard/members' element ={<Members />} />
+         
+          </Route>
         </Routes>
         </BrowserRouter>
       

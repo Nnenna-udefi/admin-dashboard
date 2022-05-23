@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import '../../css/navbar.css';
 import { FaHome, FaUsers, FaSignOutAlt,FaShoppingCart } from "react-icons/fa";
 
-const dashboard = () => {
+const sidebar = () => {
 
   
 
@@ -15,7 +15,7 @@ const dashboard = () => {
       
       <ul className='dash-list'>
           <li className='dash-link'>
-          <Link to='/home' className='links'><FaHome className='fa'/>Home</Link>
+          <Link to='/dashboard' className='links'><FaHome className='fa'/>Home</Link>
           </li>
           <li className='dash-link'>
           <Link to='/dashboard/members' className='links'><FaUsers className='fa'/>Members</Link>
@@ -35,4 +35,4 @@ const dashboard = () => {
   )
 }
 
-export default dashboard
+export default sidebar

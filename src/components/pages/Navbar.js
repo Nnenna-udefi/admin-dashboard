@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className='top-header'>
         <input type="text" placeholder='Welcome, Adrielle' name="name" className='home-input' />
         <FaBell  className="bell"/>
-        <p>Adrielle John</p>
+        <p>Adrielle</p>
         </div>
         </div>
 
