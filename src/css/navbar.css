@@ -107,12 +107,31 @@ th{
     margin-top: 2rem;
 }
 .cards{
-    margin: 2rem;
+    margin: 0.5rem;
     background-color:rgb(104, 148, 133);
     border-radius: 10px;
     width: 100%;
     padding: 2rem 1rem;
+    
 }
+
+.cards span {
+    font-size: 1rem;
+    color: black;
+    padding-left: 0.5rem;
+    font-weight: normal;
+}
+
+.cards p {
+    color: white;
+    font: 2rem;
+    font-weight: 500;
+}
+
+.cards img {
+    width: 10rem;
+}
+
 .product-title{
     text-align: center;
     margin-top: 2rem;

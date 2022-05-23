@@ -30,8 +30,8 @@
 .chart{
     padding: 2rem;
     margin: 2rem 1rem;
-    width: 100%;
-    height: 1000px;
+    width: fit-content;
+    height: fit-content;
     border: 2px solid black;
 }
 .signup-btn{

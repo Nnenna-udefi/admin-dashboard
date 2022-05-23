@@ -1,68 +1,56 @@
-import React from 'react'
-import { ResponsiveContainer, XAxis, Line, Tooltip, CartesianGrid, Legend } from 'recharts';
+// src/components/line.rechart.js
 
-export default function Linechart() {
+import React from "react";
+import { LineChart, Line, YAxis, XAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-  const data = [
-      {
-        name: 'Jan',
-        "No. of SignUps": 4000,
-        pv: 2400,
-        amt: 2400,
-      },
-      {
-        name: 'Feb',
-        "No. of SignUps": 3000,
-        pv: 1398,
-        amt: 2210,
-      },
-      {
-        name: 'March',
-        "No. of SignUps": 2000,
-        pv: 9800,
-        amt: 2290,
-      },
-      {
-        name: 'April',
-        "No. of SignUps": 2780,
-        pv: 3908,
-        amt: 2000,
-      },
-      {
-        name: 'May',
-        "No. of SignUps": 1890,
-        pv: 4800,
-        amt: 2181,
-      },
-      {
-        name: 'June',
-        "No. of SignUps": 2390,
-        pv: 3800,
-        amt: 2500,
-      },
-      {
-        name: 'July',
-        "No. of SignUps": 3490,
-        pv: 4300,
-        amt: 2100,
-      },
-    ];
-  return (
-    <div>
-      <h3>No of Sign Ups</h3>
 
-      <ResponsiveContainer width='100%' aspect={(4/1)}>
-<Linechart data={data}>
-<XAxis dataKey='name' stroke="#5550bd"> </XAxis>
-<Line type ="monotone" dataKey="No. of SignUps" stroke="#5550bd"/>
-<Tooltip />
-</Linechart>
-<CartesianGrid />
-<Legend />
-      </ResponsiveContainer>
-      </div>
-  )
-}
+
+// In the object of Array you created you were not writting the key value well.
+// I don't know much of chart for now, so i got this one from online. though i tried comparing it with your own, but is only at the Object arrays i saw mistake.
+
+function Linechart() {
+
+    const data = [
+        {
+            "name": "Jan 2019",
+            "Product A": 3432,
+            "Procuct B": 2342
+        },
+        {
+            "name": "Feb 2019",
+            "Product A": 2342,
+            "Procuct B": 3246
+        },
+        {
+            "name": "Mar 2019",
+            "Product A": 4565,
+            "Procuct B": 4556
+        },
+        {
+            "name": "Apr 2019",
+            "Product A": 6654,
+            "Procuct B": 4465
+        },
+        {
+            "name": "May 2019",
+            "Product A": 8765,
+            "Procuct B": 4553
+        }
+    ]
+        return (
+            <LineChart width={730} height={250} data={data}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="Product A" stroke="#0095FF" />
+                <Line type="monotone" dataKey="Procuct B" stroke="#FF0000" />
+            </LineChart>
+        )
+    };
+export default Linechart;
 
 
 // import React from 'react';
