@@ -1,6 +1,7 @@
 import React from 'react'
 import { HashLink as Link} from 'react-router-hash-link'
 import { FaBell } from 'react-icons/fa'
+import Profile from '../../images/profile-img.jpg'
 import '../../css/navbar.css'
 import '../../css/home.css'
 
@@ -24,7 +25,8 @@ const Navbar = () => {
         <div className='top-header'>
         <input type="text" placeholder='Welcome, Adrielle' name="name" className='home-input' />
         <FaBell  className="bell"/>
-        <p>Adrielle</p>
+        <img src={Profile} alt="" className='profile-img'/>
+       
         </div>
         </div>
 

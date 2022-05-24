@@ -15,7 +15,7 @@ Link{
 }
 .bell{
     color: black;
-    margin: 1rem;
+    margin: 1.5rem 1rem ;
 }
 .sidebar{
     left: 0;
@@ -108,12 +108,31 @@ th{
 }
 .cards{
     margin: 2rem;
-    background-color:rgb(104, 148, 133);
+    background-color:rgb(216, 212, 207);
     border-radius: 10px;
     width: 100%;
     padding: 2rem 1rem;
 }
+.cards img{
+    width: 100%;
+}
+.card-title{
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+span{
+    font-weight: 700;
+}
 .product-title{
     text-align: center;
     margin-top: 2rem;
+}
+.profile-img{
+    width: 5%;
+}
+@media screen and (max-width: 600px) {
+    .card-box{
+        display: block;
+    }
+    
 }

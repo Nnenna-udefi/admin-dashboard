@@ -64,7 +64,7 @@ const home = () => {
 
 
         <div className='chart'>
-          <h1>Hello Chart</h1>
+          <h1>No. of Sign Ups Monthly</h1>
           {/* <Linechart />    */}
    </div>
 
