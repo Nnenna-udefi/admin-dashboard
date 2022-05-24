@@ -1,12 +1,11 @@
 import React from 'react'
-// import {Link} from 'react-router-dom'
 import Navbar from './Navbar'
 import { FaUsers } from "react-icons/fa";
 import '../../css/home.css'
 import About from '../pages/about'
-// import Dashboard from '../pages/dashboard';
 import Linechart from '../chart';
-// import Chart from 'charts.js/auto';
+import Chart from '../linechart'
+
 
 
 
@@ -14,25 +13,12 @@ import Linechart from '../chart';
 
 const home = () => {
 
-//   const data ={
-//     labels: [
-//         'Jan', 'Feb', 'March', 'April', 'May' ],
-//         datasets: [
-//            { 
-//              label: 'No of Signups (M)',
-//             data: [3, 2, 2, 1, 5],
-//             borderColor: ['rgba(255, 206, 86, 0.2)'],
-//             backgroundColor: ['rgba(255, 206, 86, 0.2)'],
-//             pointBackgroundColor: ['rgba(255, 206, 86, 0.2)']
-//         }
-//         ]
-// };
+
 
   return (
   
     <div>
 
-      {/* <Dashboard /> */}
 
      <div className='main'>
      <Navbar />
@@ -64,8 +50,16 @@ const home = () => {
 
 
         <div className='chart'>
+          <div>
           <h1>No. of Sign Ups Monthly</h1>
-          <Linechart />   
+          <Linechart /> 
+          </div>
+
+          <div>
+          <h1>Product Sales</h1>
+          <Chart />
+          </div>
+            
    </div>
 
       </div>
