@@ -1,41 +1,41 @@
 import React from 'react'
 import { ResponsiveContainer, XAxis, Line, Tooltip, CartesianGrid, Legend } from 'recharts';
 
-export default function Linechart() {
+function Linechart() {
 
   const data = [
       {
-        name: 'Jan',
+        "name": "Jan",
         "No. of SignUps": 4000,
         
       },
       {
-        name: 'Feb',
+        "name": "Feb",
         "No. of SignUps": 3000,
        
       },
       {
-        name: 'March',
+        "name": "March",
         "No. of SignUps": 2000,
        
       },
       {
-        name: 'April',
+        "name": "April",
         "No. of SignUps": 2780,
        
       },
       {
-        name: 'May',
+        "name": "May",
         "No. of SignUps": 1890,
        
       },
       {
-        name: 'June',
+        "name": "June",
         "No. of SignUps": 2390,
        
       },
       {
-        name: 'July',
+        "name": "July",
         "No. of SignUps": 3490,
       
       },
@@ -45,17 +45,18 @@ export default function Linechart() {
       <h3>No of Sign Ups</h3>
 
       <ResponsiveContainer width='100%' aspect={(4/1)}>
-<Linechart data={data}>
-<XAxis dataKey='name' stroke="#5550bd"> </XAxis>
-<Line type ="monotone" dataKey="No. of SignUps" stroke="#5550bd"/>
-<Tooltip />
-</Linechart>
-<CartesianGrid />
-<Legend />
+        <Linechart data={data}>
+        <XAxis dataKey='name' stroke="#5550bd"> </XAxis>
+        <Line type ="monotone" dataKey="No. of SignUps" stroke="#5550bd"/>
+        <Tooltip />
+        </Linechart>
+        <CartesianGrid />
+        <Legend />
       </ResponsiveContainer>
       </div>
   )
 }
+export default Linechart;
 
 
 // import React from 'react';

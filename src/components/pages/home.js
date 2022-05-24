@@ -5,7 +5,7 @@ import { FaUsers } from "react-icons/fa";
 import '../../css/home.css'
 import About from '../pages/about'
 // import Dashboard from '../pages/dashboard';
-// import Linechart from '../Linechart';
+import Linechart from '../chart';
 // import Chart from 'charts.js/auto';
 
 
@@ -65,7 +65,7 @@ const home = () => {
 
         <div className='chart'>
           <h1>No. of Sign Ups Monthly</h1>
-          {/* <Linechart />    */}
+          <Linechart />   
    </div>
 
       </div>
