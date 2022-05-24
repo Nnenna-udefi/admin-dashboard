@@ -29,8 +29,8 @@
 }
 .chart{
     padding: 2rem;
-    margin: 2rem 1rem;
-    width: 100%;
+    margin: 2rem 0;
+    width: 90%;
     border: 2px solid black;
     
 }
@@ -54,4 +54,10 @@
 }
 .form-body{
     margin: 2rem;
+}
+@media screen and (max-width: 600px) {
+    .main{
+        margin-left: 0;
+
+    }
 }

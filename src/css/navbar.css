@@ -134,5 +134,15 @@ span{
     .card-box{
         display: block;
     }
+
+    .sidebar{
+        /* left: 0; */
+        width: 200px;
+        height: auto;
+        position: absolute;
+        background-color: rgb(26, 26, 29);
+        color: #fff;
+    }
+   
     
 }
