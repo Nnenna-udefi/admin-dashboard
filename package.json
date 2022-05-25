@@ -2,7 +2,7 @@
   "name": "login-website",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://Nnenna-udefi.github.io",
+  "homepage": "https://Nnenna-udefi.github.io",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.4",
@@ -17,6 +17,7 @@
     "react-rating-tooltip": "^1.2.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
+    "recharts": "^2.1.10",
     "save-dev": "^0.0.1-security",
     "web-vitals": "^2.1.4"
   },
@@ -26,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
