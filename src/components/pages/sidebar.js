@@ -1,24 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useState } from 'react';
 import '../../css/navbar.css';
 import { FaHome, FaUsers, FaSignOutAlt,FaShoppingCart } from "react-icons/fa";
 
-const sidebar = () => {
-
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-  }
+const Sidebar = () => {
+  const [sidebar, setSidebar] = useState(false)
+  const showSidebar = () => setSidebar(!sidebar)
   
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-  }
-
-  
-
-  // let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
   return (
     <div className='sidebar' id="sidebar">
-<button onclick="w3_close()" class="w3-bar-item w3-large">&times;</button>
+<button onclick={showSidebar} class="w3-bar-item w3-large">&times;</button>
       <h2 className='header'>HAULK</h2>
       <h3>Welcome back</h3>
       
@@ -44,4 +36,4 @@ const sidebar = () => {
   )
 }
 
-export default sidebar
+export default Sidebar

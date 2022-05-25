@@ -74,6 +74,8 @@ Link{
 }
 .w3-bar-item{
     display: none;
+    text-align: center;
+    margin: 1rem;
 }
  
 .Nav-list{
@@ -134,21 +136,26 @@ span{
 .profile-img{
     width: 5%;
 }
+.w3-button{
+    display: none;
+    
+}
 @media screen and (max-width: 600px) {
     .card-box{
         display: block;
     }
 
     .sidebar{
-        /* left: 0; */
+        left: -100%;
         width: 200px;
         height: auto;
         /* display: none; */
         position: absolute;
         background-color: rgb(26, 26, 29);
         color: #fff;
+        transition: 850ms;
     }
-    .w3-bar-item{
+    .w3-bar-item, .w3-button{
         display: block;
     }
   
