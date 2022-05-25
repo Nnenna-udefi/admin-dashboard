@@ -72,6 +72,10 @@ Link{
     color: #fff;
     /* color: #000; */
 }
+.w3-bar-item{
+    display: none;
+}
+ 
 .Nav-list{
     display: flex;
     
@@ -139,10 +143,13 @@ span{
         /* left: 0; */
         width: 200px;
         height: auto;
+        /* display: none; */
         position: absolute;
         background-color: rgb(26, 26, 29);
         color: #fff;
     }
-   
-    
+    .w3-bar-item{
+        display: block;
+    }
+  
 }

@@ -10,6 +10,8 @@ const Navbar = () => {
   return (
     <div>
     <div className='navbar'>
+
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
       <h2>HAULK</h2>
         
         <ul className='Nav-list'>

@@ -5,11 +5,20 @@ import { FaHome, FaUsers, FaSignOutAlt,FaShoppingCart } from "react-icons/fa";
 
 const sidebar = () => {
 
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
   
 
   // let userDetails = JSON.parse(sessionStorage.getItem("userDetails"))
   return (
-    <div className='sidebar'>
+    <div className='sidebar' id="sidebar">
+<button onclick="w3_close()" class="w3-bar-item w3-large">&times;</button>
       <h2 className='header'>HAULK</h2>
       <h3>Welcome back</h3>
       
