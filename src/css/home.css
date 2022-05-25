@@ -1,5 +1,6 @@
 .badge{
-    background-color: #fff;
+    background-color: #4f4fac;
+    color:rgb(216, 212, 207);
     border-radius: 5px;
     margin-right: 2rem;
     padding: 1rem;
@@ -60,4 +61,8 @@
         margin-left: 0;
 
     }
+    .about-para{
+        margin-left: 0;
+    }
+    
 }

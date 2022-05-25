@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { FaUsers } from "react-icons/fa";
+import { FaUsers, FaShoppingCart } from "react-icons/fa";
 import '../../css/home.css'
 import About from '../pages/about'
 import Linechart from '../chart';
@@ -28,14 +28,14 @@ const home = () => {
 
         <div className='badge-section'>
 
-          <div className='badge'>
+          <div className='badge' >
             <FaUsers />
             <p>Total Users</p>
             <p>15</p>
           </div>
 
           <div className='badge'>
-            <FaUsers />
+            <FaShoppingCart />
             <p>Total Products</p>
             <p>50</p>
           </div>

@@ -6,32 +6,48 @@ import { FaHome, FaUsers, FaSignOutAlt,FaShoppingCart } from "react-icons/fa";
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false)
-  const showSidebar = () => setSidebar(!sidebar)
+  const showSidebar = () => {
+    setSidebar(!sidebar)
+  }
   
   return (
-    <div className='sidebar' id="sidebar">
-<button onclick={showSidebar} class="w3-bar-item w3-large">&times;</button>
+    <div className={sidebar ? 'sidebar' : 'sidebar-mobile'}>
+
+      <div className='menu-icon' onClick={showSidebar}>
+        {!sidebar ? <button className="w3-button w3-teal w3-xlarge">☰</button> : <button class="w3-bar-item w3-large">&times;</button>}
+
+      </div>
+      
+
+     
+    <div className='sidebar sidebar-mobile'>
+
       <h2 className='header'>HAULK</h2>
       <h3>Welcome back</h3>
       
       <ul className='dash-list'>
           <li className='dash-link'>
-          <Link to='/dashboard' className='links'><FaHome className='fa'/>Home</Link>
+          <FaHome className='fa'/>
+          <Link to='/dashboard' className='links'>Home</Link>
           </li>
           <li className='dash-link'>
-          <Link to='/dashboard/members' className='links'><FaUsers className='fa'/>Members</Link>
+          <FaUsers className='fa'/>
+          <Link to='/dashboard/members' className='links'>Members</Link>
           </li>
           <li className='dash-link'>
-          <Link to='/dashboard/clients' className='links'><FaUsers className='fa' />Clients</Link>
+          <FaUsers className='fa' />
+          <Link to='/dashboard/clients' className='links'>Clients</Link>
           </li>
           <li className='dash-link'>
-          <Link to='/dashboard/product' className='links'><FaShoppingCart className='fa'/>Products</Link>
+          <FaShoppingCart className='fa'/>
+          <Link to='/dashboard/product' className='links'>Products</Link>
           </li>
           <li className='dash-links'>
-            <Link to='/' className='links'><FaSignOutAlt className='fa'/>LogOut</Link>
+          <FaSignOutAlt className='fa'/>
+            <Link to='/' className='links'>LogOut</Link>
           </li>
       </ul>
-
+      </div>
       </div>
   )
 }

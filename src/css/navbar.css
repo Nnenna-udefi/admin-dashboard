@@ -72,11 +72,7 @@ Link{
     color: #fff;
     /* color: #000; */
 }
-.w3-bar-item{
-    display: none;
-    text-align: center;
-    margin: 1rem;
-}
+
  
 .Nav-list{
     display: flex;
@@ -140,23 +136,38 @@ span{
     display: none;
     
 }
+.w3-bar-item{
+    display: none;
+   
+}
 @media screen and (max-width: 600px) {
     .card-box{
         display: block;
     }
 
-    .sidebar{
-        left: -100%;
+    .sidebar .closebtn{
+        left: 0;
         width: 200px;
         height: auto;
         /* display: none; */
-        position: absolute;
-        background-color: rgb(26, 26, 29);
-        color: #fff;
+     position: absolute;
+     
         transition: 850ms;
     }
+  
     .w3-bar-item, .w3-button{
         display: block;
+        text-align: center;
+        margin: 1rem;
     }
+    /* .sidebar-mobile{
+        left: 0;
+        width: 50px;
+    } */
+ 
+  
+    .profile-img{
+        width: 10%;
+        }
   
 }
