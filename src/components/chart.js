@@ -41,7 +41,7 @@ function Linechart() {
           },
     ]
         return (
-            <LineChart width={730} height={250} data={data} 
+            <LineChart width={650} height={250} data={data} 
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <Line type ="monotone" dataKey="No. of SignUps" stroke="#5550bd"/>
