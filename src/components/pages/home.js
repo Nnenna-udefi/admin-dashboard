@@ -4,7 +4,8 @@ import { FaUsers, FaShoppingCart } from "react-icons/fa";
 import '../../css/home.css'
 import About from '../pages/about'
 import Linechart from '../chart';
-import Chart from '../linechart'
+import Chart from '../linechart';
+import Sidebar from '../pages/sidebar'
 
 
 
@@ -19,7 +20,7 @@ const home = () => {
   
     <div>
 
-
+<Sidebar />
      <div className='main'>
      <Navbar />
    

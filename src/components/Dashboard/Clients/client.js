@@ -3,6 +3,7 @@ import React from 'react'
 // import Axios from 'axios'
 import { useState, useEffect } from 'react'
 import Navbar from '../../pages/Navbar'
+import Sidebar from '../../pages/sidebar'
 // import { useParams } from 'react-router-dom'
 
 const Client = () => {
@@ -40,7 +41,7 @@ fetchData();
   
   return (
     <div>
-
+<Sidebar />
     < div className='main'>
    <Navbar />
       <div>

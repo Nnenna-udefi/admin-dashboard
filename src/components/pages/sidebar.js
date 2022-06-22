@@ -6,21 +6,27 @@ import { FaHome, FaUsers, FaSignOutAlt,FaShoppingCart } from "react-icons/fa";
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false)
+  //create a custom function that will change sidebar state from false to true and true to false
   const showSidebar = () => {
-    setSidebar(!sidebar)
-  }
+    sidebar ? setSidebar(false) : setSidebar(true)
+    // setSidebar(!sidebar)
+  };
   
   return (
-    <div className={sidebar ? 'sidebar' : 'sidebar-mobile'}>
-
-      <div className='menu-icon' onClick={showSidebar}>
-        {!sidebar ? <button className="w3-button w3-teal w3-xlarge">☰</button> : <button class="w3-bar-item w3-large">&times;</button>}
-
-      </div>
+    <div className='sidebar'>
+      <div>
+      <div className={sidebar ? 'logo' : 'big-logo'}> 
       
+      </div>
 
+        <div className='menu-icon' onClick={showSidebar}>
+          {sidebar ? (<button className="w3-button w3-teal w3-xlarge">☰</button>) : (<button className="w3-bar-item w3-large">&times;</button>)}
+
+        </div>
+      
+      </div>
      
-    <div className='sidebar sidebar-mobile'>
+    <div >
 
       <h2 className='header'>HAULK</h2>
       <h3>Welcome back</h3>

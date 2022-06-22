@@ -4,7 +4,6 @@ import Home from './components/pages/home';
 import SignIn from './components/Auth/signIn';
 import Navbar from './components/pages/Navbar';
 import Product from './components/Dashboard/Products/product';
-import Sidebar from './components/pages/sidebar';
 import Members from './components/Dashboard/Members/member';
 import Clients from './components/Dashboard/Clients/client';
 import Protectedroute from './components/Protectedroute';
@@ -22,7 +21,7 @@ function App() {
           <Route path="/" element={<SignIn />}/>
         </Routes>
 
-      <Sidebar />
+      
       
       <Routes>
         <Route element ={<Protectedroute />}>

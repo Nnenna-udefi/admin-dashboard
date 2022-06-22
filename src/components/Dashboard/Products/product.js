@@ -2,6 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react';
 // import Dashboard from '../../pages/dashboard';
 import Navbar from '../../pages/Navbar';
+import Sidebar from '../../pages/sidebar';
 
 const Product = () => {
 
@@ -40,7 +41,7 @@ fetchData();
 
   return (
 <div>
-
+<Sidebar />
     < div className='main'>
    <Navbar />
 

@@ -25,6 +25,7 @@ Link{
     background-color: rgb(26, 26, 29);
     color: #fff;
 }
+
 .header{
     text-transform: uppercase;
     text-align: center;
@@ -145,9 +146,9 @@ span{
         display: block;
     }
 
-    .sidebar .closebtn{
-        left: 0;
-        width: 200px;
+    .sidebar {
+        left:100;
+        /* width: 0px; */
         height: auto;
         /* display: none; */
      position: absolute;
@@ -162,10 +163,22 @@ span{
     }
     /* .sidebar-mobile{
         left: 0;
-        width: 50px;
-    } */
+        
+        /* width: 50px; */
+    /* } */
  
-  
+   .menu-icon {
+        color: #000;
+        position: absolute;
+        /* right: 0; */
+        z-index: 9999;
+        line-height: 20px;
+        /* border-radius: 50%; */
+        font-weight: bold;
+        /* font-size: 22px; */
+        /* top: 55px; */
+        cursor: pointer;
+      }
     .profile-img{
         width: 10%;
         }

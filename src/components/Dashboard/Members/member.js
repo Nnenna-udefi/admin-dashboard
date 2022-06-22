@@ -2,6 +2,7 @@ import React from 'react'
 // import Dashboard from '../../pages/dashboard'
 import {useState, useEffect} from 'react'
 import Navbar from '../../pages/Navbar'
+import Sidebar from '../../pages/sidebar'
 
 const Member = () => {
 
@@ -39,7 +40,7 @@ fetchData();
   
   return (
     <div>
-    
+    <Sidebar />
     <div className='main'>
      <Navbar />   
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import { useEffect, useState } from "react";
 import '../../css/sign.css'
 
@@ -52,9 +51,9 @@ const SignIn = () => {
 
         <div className='form-center'>
         <form className='form' onSubmit={submitHandler} >
-            <input type='email' placeholder ='Email Address' name='email' onChange={handleChange}/>
+            <input type='email' placeholder ='Email Address' name='email' required onChange={handleChange}/>
             <br />
-            <input type='password' placeholder ='Password' name='password' onChange={handleChange}/>
+            <input type='password' placeholder ='Password' name='password' required onChange={handleChange}/>
             <br />
             <div className='para'>
               <input type="checkbox" />
